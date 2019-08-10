@@ -13,10 +13,10 @@ public class PasswordConstraintValidator implements ConstraintValidator<ValidPas
 
         if (result.isValid())  { 
            log.info("Registration Successful!!");
-            return "registration"
+            return "registration";
         }
         else{
-          return "Password must contain atleast 1 alphabet, 1 number & 1 special character"       
+          log.error("Password must contain atleast 1 alphabet, 1 number & 1 special character");      
            return "registration";
            
      /* use ContraintvalidatorContext to display the error in the typed passowrd
