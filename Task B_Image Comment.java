@@ -50,6 +50,6 @@ public class CommentDAO{
   }
 public void insertComment(Comment comment){
   String query = "insert into Image(comment, current_user, modified_on )values ("" + comment.text + "," + comment.user + "," + comment.createdDate) where comment.image = image ;
-  template.update(sql)
+  template.update(query)
   }
 }
